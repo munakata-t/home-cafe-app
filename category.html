@@ -44,10 +44,12 @@
     </footer>
   </div>
 
-    <script defer src="./js/firebase-config.js"></script>
-  <script defer src="./js/firebase.js"></script>
-  <script defer src="./js/shared-db.js"></script>
+   <!-- ✅ Firebase系は module で読む（import対応） -->
+  <script type="module" src="./js/firebase-config.js"></script>
+  <script type="module" src="./js/firebase.js"></script>
+  <script type="module" src="./js/shared-db.js"></script>
 
+  <!-- ✅ 既存のローカル版（localStorage） -->
   <script defer src="./js/storage.js"></script>
   <script defer src="./js/category.js"></script>
 </body>

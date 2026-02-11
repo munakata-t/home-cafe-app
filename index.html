@@ -11,17 +11,14 @@
   <div class="app">
 
     <header class="header">
-  <a href="./history.html" class="icon-btn" aria-label="注文履歴">≡</a>
-  <h1 class="header__title">メニュー</h1>
- <a href="./kitchen.html" class="icon-btn icon-btn--kitchen" aria-label="キッチン">
-  キッチン
-</a>
-
-</header>
-
+      <a href="./history.html" class="icon-btn" aria-label="注文履歴">≡</a>
+      <h1 class="header__title">メニュー</h1>
+      <a href="./kitchen.html" class="icon-btn icon-btn--kitchen" aria-label="キッチン">
+        キッチン
+      </a>
+    </header>
 
     <main class="main">
-
       <!-- Top image -->
       <section class="hero" aria-label="トップ画像">
         <div class="hero__inner">
@@ -50,7 +47,6 @@
       <section id="menuEmpty" class="empty" aria-label="メニューがないとき">
         <div class="empty__box">表示できるメニューがありません</div>
       </section>
-
     </main>
 
     <!-- Bottom bar -->
@@ -65,10 +61,12 @@
 
   </div>
 
-    <script defer src="./js/firebase-config.js"></script>
-  <script defer src="./js/firebase.js"></script>
-  <script defer src="./js/shared-db.js"></script>
+  <!-- ✅ Firebase系は module で読む（import対応） -->
+  <script type="module" src="./js/firebase-config.js"></script>
+  <script type="module" src="./js/firebase.js"></script>
+  <script type="module" src="./js/shared-db.js"></script>
 
+  <!-- ✅ 既存のローカル版（localStorage） -->
   <script defer src="./js/storage.js"></script>
   <script defer src="./js/index.js"></script>
 </body>
