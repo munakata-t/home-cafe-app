@@ -284,29 +284,7 @@ body{
   .bottom{ max-width: var(--app-max-desktop); padding: 14px 24px; }
   .btn--wide{ min-width: 140px; }
 }
-/* =========================
-   キッチンボタン（スマホはみ出し対策）
-========================= */
-.icon-btn--kitchen{
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  white-space: nowrap;
 
-  /* ここが大事：header内で上下中央に収まる */
-  height: 44px;             /* icon-btnと同じにする */
-  padding: 0 12px;
-  min-width: 52px;
-
-  border: 2px solid #1f1f1f;
-  border-radius: 999px;
-
-  margin-right: 0;          /* 余計な押し出しを消す */
-  box-sizing: border-box;   /* border込みでサイズ計算 */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .icon-btn--kitchen:active{
   background: rgba(0,0,0,0.06);
@@ -322,4 +300,42 @@ body{
   border-radius: 999px;
   height: 36px;
   margin-right: 4px;
+}
+/* =========================
+   キッチンボタン（スマホはみ出し対策）※これ1個だけ残す
+========================= */
+.header{
+  height: 58px;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+}
+
+/* 右上キッチンだけ幅が足りないので “右列” を少し広げる */
+.header{
+  grid-template-columns: 56px 1fr 86px; /* ←ここが効く */
+}
+
+.icon-btn--kitchen{
+  width: auto;              /* 52px固定を解除 */
+  min-width: 72px;          /* キッチン文字が収まる */
+  height: 44px;             /* ヘッダー内で安定 */
+  padding: 0 10px;
+
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  white-space: nowrap;
+
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.icon-btn--kitchen:active{
+  background: rgba(0,0,0,0.06);
 }
