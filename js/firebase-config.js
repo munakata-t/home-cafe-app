@@ -1,10 +1,10 @@
-// ./js/firebase-config.js
-// Firebaseコンソール → プロジェクト設定 → SDK設定と構成 → 「構成」からコピペして埋める
+// js/firebase-config.js
 window.FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "1:XXXX:web:XXXX",
+  apiKey: "AIzaSyAdXQfO5VDJsH84Gw_jdVJPivopuaq0h7M",
+  authDomain: "mobile-order-app-6f839.firebaseapp.com",
+  projectId: "mobile-order-app-6f839",
+  storageBucket: "mobile-order-app-6f839.firebasestorage.app",
+  messagingSenderId: "645504503657",
+  appId: "1:645504503657:web:2649f6032b279f873977f8",
+  measurementId: "G-CSZKGRRRCX"
 };
