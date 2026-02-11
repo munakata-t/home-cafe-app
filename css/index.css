@@ -285,16 +285,31 @@ body{
   .btn--wide{ min-width: 140px; }
 }
 /* =========================
-   キッチンボタン（文字用）
+   キッチンボタン（スマホはみ出し対策）
 ========================= */
 .icon-btn--kitchen{
-  font-size: 14px;          /* 絵文字より小さく */
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 1px;
   white-space: nowrap;
 
-  padding: 0 10px;
-  min-width: 52px;          /* 他のicon-btnと高さを揃える */
+  /* ここが大事：header内で上下中央に収まる */
+  height: 44px;             /* icon-btnと同じにする */
+  padding: 0 12px;
+  min-width: 52px;
+
+  border: 2px solid #1f1f1f;
+  border-radius: 999px;
+
+  margin-right: 0;          /* 余計な押し出しを消す */
+  box-sizing: border-box;   /* border込みでサイズ計算 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn--kitchen:active{
+  background: rgba(0,0,0,0.06);
 }
 
 /* タップしやすくする（スマホ） */
